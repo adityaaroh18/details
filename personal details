@@ -1,0 +1,54 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+/* 
+// Metacrafters - Beginning Javascript
+//
+// This is a javascript playground for testing your javascript code!
+// When you are ready to test, simply right click and select "Run Code"
+// to see the result print below. If you have more then one snippet of code,
+// you can highlight the code you want to test, and then right click and select "Run Code"
+*/
+
+// Enter your code below this line
+
+// create a variable to hold your NFT's
+const NFTs = []
+
+// this function will take in some values as parameters, create
+// NFT object using the parameters passed to it for its metadata
+// and store it in the variable above.
+
+function mintNFT (_name, _state, _country, _proffession) {
+    const NFT = {
+
+     "name": _name,
+     "state": _state,
+     "country": _country,
+     "proffession": _proffession
+}
+    NFTs.push(NFT);
+    console.log("Minted: " + _name);
+}
+
+// create a "loop" that will go through an "array of NF1's
+// and print their metadata with console.log()
+
+function listNFTs () {
+for(let i=0; i<NFTs.length; i++){
+       console.log("\nNO : \t\t" + (i + 1));
+       console.log("\n name:" + NFTs[i].name); 
+       console.log("state :" + NFTs[i].state); 
+       console.log("country :" + NFTs[i].country); 
+       console.log("proffesssion :" + NFTs[i].proffession); 
+ }
+}
+// print the total number of NFTs we have minted to the console
+function getTotalSupply(){
+    console.log("\n" + NFTs.length);
+} 
+// call your function below the line
+mintNFT("aditya", "bihar", "india", "student");
+mintNFT("rishi ", "haryan", "india", "teacher");
+
+listNFTs();
+getTotalSupply();
